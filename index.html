@@ -28,6 +28,7 @@
                 <a href="#features" class="nav-link">주요기능</a>
                 <a href="#download" class="nav-link">다운로드</a>
                 <a href="#techstack" class="nav-link">기술스택</a>
+                <a href="#qna" class="nav-link">Q&A</a>
                 <a href="#contact" class="nav-link">문의</a>
             </nav>
             <button class="hamburger" id="hamburger" aria-label="메뉴 열기">
@@ -409,6 +410,27 @@
         </div>
     </section>
 
+    <!-- Q&A -->
+    <section class="section" id="qna">
+        <div class="container">
+            <h2 class="section-title">Q&A</h2>
+            <p class="section-desc">제품 관련 질문을 남겨주세요. GitHub 계정으로 로그인 후 등록할 수 있습니다.</p>
+            <!-- 질문 등록 폼 -->
+            <div class="qna-form">
+                <input type="text" id="qna-title" placeholder="질문 제목을 입력하세요">
+                <textarea id="qna-body" placeholder="질문 내용을 입력하세요" rows="3"></textarea>
+                <div class="qna-form-actions">
+                    <span class="qna-form-hint">* GitHub 로그인이 필요합니다</span>
+                    <button class="btn btn-primary" id="qna-submit">질문 등록</button>
+                </div>
+            </div>
+            <!-- 질문 목록 -->
+            <div id="qna-list">
+                <div class="qna-loading">질문을 불러오는 중...</div>
+            </div>
+        </div>
+    </section>
+
     <!-- Footer -->
     <footer class="footer" id="contact">
         <div class="container">
@@ -435,6 +457,7 @@
                 <div class="footer-links">
                     <h4>문의</h4>
                     <ul>
+                        <li><a href="mailto:ybr1090@gmail.com">ybr1090@gmail.com</a></li>
                         <li><a href="https://github.com/ybRoh" target="_blank" rel="noopener">GitHub 프로필</a></li>
                         <li><a href="https://github.com/ybRoh/ybRoh.github.io/issues" target="_blank" rel="noopener">문의하기 (Issues)</a></li>
                     </ul>
