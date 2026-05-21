@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="자동차부품 제조를 위한 통합 생산관리 솔루션 - MES, QMS, 구매관리 시스템">
+    <title>자동차부품 제조 솔루션 | MES 생산관리 시스템</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header" id="header">
+        <div class="header-inner">
+            <a href="#" class="logo">
+                <span class="logo-icon">
+                    <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+                        <rect width="28" height="28" rx="6" fill="#0070F2"/>
+                        <path d="M7 14L11 18L21 8" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </span>
+                <span class="logo-text">MES Solution</span>
+            </a>
+            <nav class="nav" id="nav">
+                <a href="#products" class="nav-link">제품소개</a>
+                <a href="#features" class="nav-link">주요기능</a>
+                <a href="#download" class="nav-link">다운로드</a>
+                <a href="#techstack" class="nav-link">기술스택</a>
+                <a href="#contact" class="nav-link">문의</a>
+            </nav>
+            <button class="hamburger" id="hamburger" aria-label="메뉴 열기">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero" id="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">자동차부품 제조를 위한<br>통합 생산관리 솔루션</h1>
+                <p class="hero-desc">
+                    사출 · 프레스 · CNC가공 · 연마 공정에 최적화된 MES 시스템으로<br>
+                    IATF 16949 품질관리, LOT 추적, 실시간 KPI까지 하나로 통합합니다.
+                </p>
+                <div class="hero-actions">
+                    <a href="#download" class="btn btn-primary btn-lg">다운로드</a>
+                    <a href="#products" class="btn btn-outline btn-lg">제품 살펴보기</a>
+                </div>
+                <div class="hero-badges">
+                    <span class="badge">Python</span>
+                    <span class="badge">React</span>
+                    <span class="badge">Vue 3</span>
+                    <span class="badge">FastAPI</span>
+                    <span class="badge">Node.js</span>
+                    <span class="badge">PostgreSQL</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 제품 소개 -->
+    <section class="section" id="products">
+        <div class="container">
+            <h2 class="section-title">제품 소개</h2>
+            <p class="section-desc">자동차부품 제조 현장에 필요한 4가지 핵심 시스템을 제공합니다.</p>
+            <div class="product-grid">
+                <!-- MES 생산관리 -->
+                <div class="product-card">
+                    <div class="product-card-header">
+                        <div class="product-icon" style="background: #EBF5FF; color: #0070F2;">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M12 20V10"/>
+                                <path d="M18 20V4"/>
+                                <path d="M6 20v-4"/>
+                            </svg>
+                        </div>
+                        <h3 class="product-name">MES 생산관리</h3>
+                    </div>
+                    <p class="product-desc">
+                        사출/프레스/CNC/연마 공정에 최적화된 생산관리 시스템.
+                        작업지시, 생산실적, LOT 추적, OEE 분석, 설비보전까지 통합 관리합니다.
+                    </p>
+                    <ul class="product-features">
+                        <li>작업지시 및 생산실적 관리</li>
+                        <li>LOT 추적 (정방향/역추적)</li>
+                        <li>OEE 분석 및 실시간 KPI</li>
+                        <li>설비보전 (PM) 관리</li>
+                        <li>금형 수명 관리</li>
+                    </ul>
+                    <div class="product-tech">
+                        <span class="tech-badge">Python</span>
+                        <span class="tech-badge">Streamlit</span>
+                        <span class="tech-badge">PostgreSQL</span>
+                    </div>
+                    <div class="product-actions">
+                        <a href="https://github.com/ybRoh/mes-streamlit/releases" class="btn btn-primary btn-sm" target="_blank" rel="noopener">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                            다운로드
+                        </a>
+                        <a href="https://github.com/ybRoh/mes-streamlit" class="btn btn-ghost btn-sm" target="_blank" rel="noopener">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                            GitHub
+                        </a>
+                    </div>
+                </div>
+
+                <!-- IATF QMS -->
+                <div class="product-card">
+                    <div class="product-card-header">
+                        <div class="product-icon" style="background: #F1FDF6; color: #107E3E;">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                            </svg>
+                        </div>
+                        <h3 class="product-name">IATF 16949 품질관리 (QMS)</h3>
+                    </div>
+                    <p class="product-desc">
+                        자동차 산업 품질경영시스템 IATF 16949 규격에 맞춘 품질관리 시스템.
+                        SPC, FMEA, MSA, PPAP, APQP 등 핵심 도구를 지원합니다.
+                    </p>
+                    <ul class="product-features">
+                        <li>SPC 공정능력 분석 (Cp/Cpk)</li>
+                        <li>FMEA 위험분석</li>
+                        <li>MSA 측정시스템 분석 (GR&R)</li>
+                        <li>PPAP / APQP 관리</li>
+                        <li>감사 및 교육훈련 관리</li>
+                    </ul>
+                    <div class="product-tech">
+                        <span class="tech-badge">FastAPI</span>
+                        <span class="tech-badge">Vue 3</span>
+                        <span class="tech-badge">Element Plus</span>
+                        <span class="tech-badge">PostgreSQL</span>
+                    </div>
+                    <div class="product-actions">
+                        <a href="https://github.com/ybRoh/mes-quality-vue/releases" class="btn btn-primary btn-sm" target="_blank" rel="noopener">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                            다운로드
+                        </a>
+                        <a href="https://github.com/ybRoh/mes-quality-vue" class="btn btn-ghost btn-sm" target="_blank" rel="noopener">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                            GitHub
+                        </a>
+                    </div>
+                </div>
+
+                <!-- MES 웹 시스템 -->
+                <div class="product-card">
+                    <div class="product-card-header">
+                        <div class="product-icon" style="background: #FFF3E0; color: #E9730C;">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
+                                <line x1="8" y1="21" x2="16" y2="21"/>
+                                <line x1="12" y1="17" x2="12" y2="21"/>
+                            </svg>
+                        </div>
+                        <h3 class="product-name">MES 웹 시스템</h3>
+                    </div>
+                    <p class="product-desc">
+                        React + Node.js 기반의 풀스택 MES 웹 애플리케이션.
+                        기준정보, 생산계획, 재고관리, 품질검사, 실시간 대시보드를 제공합니다.
+                    </p>
+                    <ul class="product-features">
+                        <li>기준정보 관리 (품목/BOM/공정/설비)</li>
+                        <li>생산계획 및 작업지시</li>
+                        <li>재고 입출고 관리</li>
+                        <li>품질검사 등록</li>
+                        <li>실시간 대시보드</li>
+                    </ul>
+                    <div class="product-tech">
+                        <span class="tech-badge">React 18</span>
+                        <span class="tech-badge">Node.js</span>
+                        <span class="tech-badge">Prisma</span>
+                        <span class="tech-badge">PostgreSQL</span>
+                    </div>
+                    <div class="product-actions">
+                        <a href="https://github.com/ybRoh/mes-system/releases" class="btn btn-primary btn-sm" target="_blank" rel="noopener">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                            다운로드
+                        </a>
+                        <a href="https://github.com/ybRoh/mes-system" class="btn btn-ghost btn-sm" target="_blank" rel="noopener">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                            GitHub
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 소모품 통합구매 -->
+                <div class="product-card">
+                    <div class="product-card-header">
+                        <div class="product-icon" style="background: #F3E8FD; color: #8B47D0;">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/>
+                                <path d="M1 1h4l2.68 13.39a2 2 0 002 1.61h9.72a2 2 0 002-1.61L23 6H6"/>
+                            </svg>
+                        </div>
+                        <h3 class="product-name">소모품 통합구매</h3>
+                    </div>
+                    <p class="product-desc">
+                        공장 소모품의 구매요청부터 발주, 입고, 재고관리까지
+                        전 과정을 통합 관리하는 구매관리 시스템입니다.
+                    </p>
+                    <ul class="product-features">
+                        <li>구매요청 및 승인 워크플로</li>
+                        <li>발주 및 납기 관리</li>
+                        <li>입고 검수 처리</li>
+                        <li>소모품 재고 현황</li>
+                        <li>구매 이력 분석</li>
+                    </ul>
+                    <div class="product-tech">
+                        <span class="tech-badge">Python</span>
+                        <span class="tech-badge">Flask</span>
+                        <span class="tech-badge">SQLite</span>
+                    </div>
+                    <div class="product-actions">
+                        <a href="https://github.com/ybRoh/procurement_system/releases" class="btn btn-primary btn-sm" target="_blank" rel="noopener">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                            다운로드
+                        </a>
+                        <a href="https://github.com/ybRoh/procurement_system" class="btn btn-ghost btn-sm" target="_blank" rel="noopener">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                            GitHub
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 핵심 기능 -->
+    <section class="section section-alt" id="features">
+        <div class="container">
+            <h2 class="section-title">핵심 기능</h2>
+            <p class="section-desc">자동차부품 제조 현장의 요구사항을 반영한 핵심 기능을 제공합니다.</p>
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#0070F2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
+                        </svg>
+                    </div>
+                    <h3 class="feature-name">실시간 KPI</h3>
+                    <p class="feature-desc">생산수량, 불량률, OEE, 가동률 등 핵심 지표를 실시간 대시보드로 모니터링합니다.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#107E3E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                            <path d="M9 12l2 2 4-4"/>
+                        </svg>
+                    </div>
+                    <h3 class="feature-name">IATF 16949</h3>
+                    <p class="feature-desc">SPC, FMEA, MSA, PPAP, APQP 등 자동차 산업 품질 Core Tool을 통합 지원합니다.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#E9730C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M16 16v1a2 2 0 01-2 2H6a2 2 0 01-2-2V7a2 2 0 012-2h2"/>
+                            <rect x="8" y="2" width="12" height="12" rx="2"/>
+                            <path d="M12 11V6"/>
+                            <path d="M9 9h6"/>
+                        </svg>
+                    </div>
+                    <h3 class="feature-name">LOT 추적</h3>
+                    <p class="feature-desc">원자재부터 완제품까지 양방향 LOT 추적으로 품질 이슈 발생 시 신속하게 대응합니다.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#BB0000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/>
+                        </svg>
+                    </div>
+                    <h3 class="feature-name">설비보전</h3>
+                    <p class="feature-desc">PM 계획, 보전 이력, 비가동 관리로 설비 가동률을 극대화하고 돌발 고장을 예방합니다.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#8B47D0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/>
+                            <polyline points="3.27 6.96 12 12.01 20.73 6.96"/>
+                            <line x1="12" y1="22.08" x2="12" y2="12"/>
+                        </svg>
+                    </div>
+                    <h3 class="feature-name">자재관리</h3>
+                    <p class="feature-desc">자재 입고, FIFO 재고관리, BOM 기반 자동 차감으로 정확한 재고를 유지합니다.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#0F828F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/>
+                            <circle cx="9" cy="7" r="4"/>
+                            <path d="M23 21v-2a4 4 0 00-3-3.87"/>
+                            <path d="M16 3.13a4 4 0 010 7.75"/>
+                        </svg>
+                    </div>
+                    <h3 class="feature-name">권한관리</h3>
+                    <p class="feature-desc">역할 기반 접근 제어(RBAC)로 사용자별 메뉴 접근 권한을 세밀하게 관리합니다.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 다운로드 -->
+    <section class="section" id="download">
+        <div class="container">
+            <h2 class="section-title">다운로드</h2>
+            <p class="section-desc">각 프로젝트의 최신 릴리스를 다운로드하세요. GitHub Releases 페이지로 이동합니다.</p>
+            <div class="download-grid">
+                <div class="download-card">
+                    <div class="download-info">
+                        <h3>MES 생산관리</h3>
+                        <span class="version-badge" data-repo="ybRoh/mes-streamlit">release</span>
+                    </div>
+                    <p>Python / Streamlit 기반 생산관리 시스템</p>
+                    <a href="https://github.com/ybRoh/mes-streamlit/releases" class="btn btn-primary" target="_blank" rel="noopener">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                        다운로드
+                    </a>
+                </div>
+                <div class="download-card">
+                    <div class="download-info">
+                        <h3>IATF 16949 QMS</h3>
+                        <span class="version-badge" data-repo="ybRoh/mes-quality-vue">release</span>
+                    </div>
+                    <p>FastAPI + Vue 3 품질관리 시스템</p>
+                    <a href="https://github.com/ybRoh/mes-quality-vue/releases" class="btn btn-primary" target="_blank" rel="noopener">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                        다운로드
+                    </a>
+                </div>
+                <div class="download-card">
+                    <div class="download-info">
+                        <h3>MES 웹 시스템</h3>
+                        <span class="version-badge" data-repo="ybRoh/mes-system">release</span>
+                    </div>
+                    <p>React + Node.js 풀스택 MES</p>
+                    <a href="https://github.com/ybRoh/mes-system/releases" class="btn btn-primary" target="_blank" rel="noopener">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                        다운로드
+                    </a>
+                </div>
+                <div class="download-card">
+                    <div class="download-info">
+                        <h3>소모품 통합구매</h3>
+                        <span class="version-badge" data-repo="ybRoh/procurement_system">release</span>
+                    </div>
+                    <p>Python / Flask 구매관리 시스템</p>
+                    <a href="https://github.com/ybRoh/procurement_system/releases" class="btn btn-primary" target="_blank" rel="noopener">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                        다운로드
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 기술 스택 -->
+    <section class="section section-alt" id="techstack">
+        <div class="container">
+            <h2 class="section-title">기술 스택</h2>
+            <p class="section-desc">각 시스템의 기술 구성을 한눈에 확인하세요.</p>
+            <div class="table-wrapper">
+                <table class="tech-table">
+                    <thead>
+                        <tr>
+                            <th>시스템</th>
+                            <th>Frontend</th>
+                            <th>Backend</th>
+                            <th>Database</th>
+                            <th>주요 라이브러리</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>MES 생산관리</strong></td>
+                            <td>Streamlit</td>
+                            <td>Python</td>
+                            <td>PostgreSQL / SQLite</td>
+                            <td>SQLAlchemy, fpdf2, python-barcode</td>
+                        </tr>
+                        <tr>
+                            <td><strong>IATF 16949 QMS</strong></td>
+                            <td>Vue 3 + Element Plus</td>
+                            <td>FastAPI</td>
+                            <td>PostgreSQL</td>
+                            <td>Pydantic, ECharts, Alembic</td>
+                        </tr>
+                        <tr>
+                            <td><strong>MES 웹 시스템</strong></td>
+                            <td>React 18 + Ant Design</td>
+                            <td>Node.js + Express</td>
+                            <td>PostgreSQL</td>
+                            <td>Prisma, Zustand, Recharts</td>
+                        </tr>
+                        <tr>
+                            <td><strong>소모품 통합구매</strong></td>
+                            <td>Jinja2 Templates</td>
+                            <td>Flask</td>
+                            <td>SQLite</td>
+                            <td>SQLAlchemy, Bootstrap</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer" id="contact">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <svg width="24" height="24" viewBox="0 0 28 28" fill="none">
+                            <rect width="28" height="28" rx="6" fill="#0070F2"/>
+                            <path d="M7 14L11 18L21 8" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <span>MES Solution</span>
+                    </div>
+                    <p>자동차부품 제조를 위한 통합 생산관리 솔루션</p>
+                </div>
+                <div class="footer-links">
+                    <h4>GitHub 저장소</h4>
+                    <ul>
+                        <li><a href="https://github.com/ybRoh/mes-streamlit" target="_blank" rel="noopener">MES 생산관리</a></li>
+                        <li><a href="https://github.com/ybRoh/mes-quality-vue" target="_blank" rel="noopener">IATF 16949 QMS</a></li>
+                        <li><a href="https://github.com/ybRoh/mes-system" target="_blank" rel="noopener">MES 웹 시스템</a></li>
+                        <li><a href="https://github.com/ybRoh/procurement_system" target="_blank" rel="noopener">소모품 통합구매</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>문의</h4>
+                    <ul>
+                        <li><a href="https://github.com/ybRoh" target="_blank" rel="noopener">GitHub 프로필</a></li>
+                        <li><a href="https://github.com/ybRoh/ybRoh.github.io/issues" target="_blank" rel="noopener">문의하기 (Issues)</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 ybRoh. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
