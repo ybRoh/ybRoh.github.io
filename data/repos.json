@@ -7,7 +7,8 @@
     "updatedAt": "2026-02-25T00:50:52Z",
     "isPrivate": true,
     "stars": 0,
-    "sizeKB": 24448
+    "sizeKB": 24448,
+    "readme": "# GSI 생산일보 시스템\n\n태블릿 기반 생산일보 관리 시스템\n\n## 기술 스택\n\n### Frontend\n- React 19 + TypeScript\n- Vite (빌드 도구)\n- Tailwind CSS\n- React Router\n- TanStack Query (React Query)\n- Zustand (상태 관리)\n\n### Backend\n- Java 17 + Spring Boot 3.2\n- Spring Security + JWT\n- JPA/Hibernate\n- PostgreSQL (운영) / H2 (개발)\n\n## 프로젝트 구조\n\n```\ngsi-production-report/\n├── frontend/                 # React 태블릿 앱\n│   ├── src/\n│   │   ├── components/       # 재사용 컴포넌트\n│   │   ├── pages/           # 화면별 페이지\n│   │   ├── hooks/           # 커스텀 훅\n│   │   ├── services/        # API 호출\n│   │   ├── stores/          # Zustand 상태관리\n│   │   └── types/           # TypeScript 타입\n│   └── package.json\n├── backend/                  # Spring Boot API 서버\n│   ├── src/main/java/com/gsi/report/\n│   │   ├── config/          # 설정\n│   │   ├── controller/      # REST 컨트롤러\n│   │   ├── service/         # 비즈니스 로직\n│   │   ├── repository/      # JPA Repository\n│   │   ├── entity/          # JPA Entity\n│   │   ├── dto/             # DTO\n│   │   └── security/        # JWT 인증\n│   └── build.gradle\n└── docker-compose.yml\n```\n\n## 로컬 개발 환경 실행\n\n### 1. Backend 실행\n\n```bash\ncd backend\n./gradlew bootRun\n```\n\n백엔드 서버가 http://localhost:8080 에서 실행됩니다.\n\n개발 모드에서는 H2 인메모리 데이터베이스를 사용하며, 다음 기본 계정이 생성됩니다:\n\n| 계정 | 비밀번호 | 역할 |\n|------|----------|------|\n| admin | admin123 | 관리자 |\n| supervisor | super123 | 감독자 |\n| worker1 | 1234 | 작업자 |\n| worker2 | 1234 | 작업자 |\n\nH2 콘솔: http://localhost:8080/h2-console\n- JDBC URL: `jdbc:h2:mem:gsidb`\n- Username: `sa`\n- Password: (비워두기)\n\n### 2. "
   },
   {
     "name": "hic-logistics",
@@ -17,7 +18,8 @@
     "updatedAt": "2026-02-18T02:03:27Z",
     "isPrivate": true,
     "stars": 0,
-    "sizeKB": 2900
+    "sizeKB": 2900,
+    "readme": "# R&A HIC물류조회\n\n해외 공장(AHD/SHD/IHD/CHD) 물류 선적 추적 및 관리 시스템\n\n## 주요 기능\n\n- 선적 대시보드 (상태별 현황, 이번 주 도착 예정)\n- 선적목록 조회 및 상세 (검색, 상태 필터)\n- Leaflet 지도 기반 운항위치 추적\n- 컨테이너 실시간 추적 외부 링크 (SeaRates, Track-Trace, Shipsgo)\n- 부품합계 (공장별/상태별 부품 집계)\n- 엑셀 업로드 (선적 데이터 일괄 등록)\n- 관리자 페이지 (선적 상태 변경, 데이터 관리)\n\n## 개발 환경\n\n```bash\nnpm install       # 의존성 설치\nnpm run dev       # 개발 서버 (port 3001)\nnpm run build     # 프로덕션 빌드\nnpm run lint      # ESLint\n```\n\n## 기술 스택\n\n- React 19 + TypeScript + Vite\n- Tailwind CSS 4\n- Zustand (상태 관리)\n- TanStack React Query\n- Leaflet + react-leaflet (지도)\n- Capacitor (Android 앱)\n\n## Android 빌드\n\n```bash\nnpm run build\nnpx cap sync android\ncd android && JAVA_HOME=/opt/homebrew/opt/openjdk@21 ./gradlew assembleDebug\n```\n\n## 프로젝트 구조\n\n```\nsrc/\n├── components/     # 공용 컴포넌트 (ShipmentTrackingMap, Layout)\n├── pages/          # 페이지 (Dashboard, ShipmentList, PartsSummary, ...)\n├── services/       # API 서비스 (Mock API 포함)\n├── stores/         # Zustand 스토어 (auth, language)\n├── hooks/          # 커스텀 훅\n├── i18n/           # 다국어 번역\n└── types/          # TypeScript 타입 정의\n```\n"
   },
   {
     "name": "mes-system",
@@ -27,7 +29,8 @@
     "updatedAt": "2026-05-21T09:57:45Z",
     "isPrivate": true,
     "stars": 0,
-    "sizeKB": 2375
+    "sizeKB": 2375,
+    "readme": "# MES System - 자동차부품 생산관리 시스템\n\n자동차부품 제조업을 위한 MES(Manufacturing Execution System) 웹 애플리케이션입니다.\n\n## 기술 스택\n\n- **Frontend**: React 18, TypeScript, Ant Design, Zustand, Recharts\n- **Backend**: Node.js, Express, TypeScript, Prisma\n- **Database**: PostgreSQL\n- **빌드 도구**: Vite\n\n## 주요 기능\n\n- **기준정보 관리**: 품목, BOM, 공정, 설비, 거래처, 창고\n- **생산관리**: 생산계획, 작업지시, 생산실적\n- **재고관리**: 입출고, 재고현황, 재고이력\n- **품질관리**: 검사등록, 불량관리\n- **대시보드**: 실시간 현황, KPI 분석\n\n## 시작하기\n\n### 1. 데이터베이스 실행\n\n```bash\n# Docker로 PostgreSQL 실행\ndocker-compose up -d\n```\n\n### 2. Backend 설정 및 실행\n\n```bash\ncd backend\n\n# 환경변수 설정 (.env 파일 확인)\n# DATABASE_URL=\"postgresql://postgres:postgres@localhost:5432/mes_db?schema=public\"\n\n# Prisma 마이그레이션 및 클라이언트 생성\nnpx prisma migrate dev --name init\nnpx prisma generate\n\n# 개발 서버 실행\nnpm run dev\n```\n\n### 3. Frontend 실행\n\n```bash\ncd frontend\n\n# 개발 서버 실행\nnpm run dev\n```\n\n### 4. 접속\n\n- Frontend: http://localhost:5173\n- Backend API: http://localhost:3001\n\n## 초기 사용자 생성\n\n백엔드 API를 통해 사용자를 생성합니다:\n\n```bash\ncurl -X POST http://localhost:3001/api/auth/register \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n    \"email\": \"admin@example.com\",\n    \"password\": \"admin123\",\n    \"name\": \"관리자\",\n    \"department\": \"생산관리팀\"\n  }'\n```\n\n## 프로젝트 구조\n\n```\nmes-system/\n├── backend/\n│   ├── src/\n│   │   ├── config/         # 설정\n│   │   ├── controllers/    # 컨트롤러\n│   │   ├── middlewares/    # 미들웨어\n│   │   ├── routes/         # 라우트\n│   │   └── index.ts        # 진입점\n│   ├── prisma/\n│   │   └── schema.prisma   # DB 스키마\n│   └── package.json\n├── f"
   },
   {
     "name": "mes-streamlit",
@@ -37,7 +40,8 @@
     "updatedAt": "2026-05-21T09:57:33Z",
     "isPrivate": true,
     "stars": 0,
-    "sizeKB": 422
+    "sizeKB": 422,
+    "readme": ""
   },
   {
     "name": "mes-quality-vue",
@@ -47,7 +51,8 @@
     "updatedAt": "2026-05-21T15:13:04Z",
     "isPrivate": true,
     "stars": 0,
-    "sizeKB": 410
+    "sizeKB": 410,
+    "readme": ""
   },
   {
     "name": "yuanta-autotrading",
@@ -57,7 +62,8 @@
     "updatedAt": "2026-02-11T09:13:35Z",
     "isPrivate": false,
     "stars": 0,
-    "sizeKB": 263
+    "sizeKB": 263,
+    "readme": "# 유안타증권 주식 자동매매 프로그램\n\nC/C++ 기반 데이트레이딩 자동매매 시스템\n\n## 개요\n\n- **대상**: 국내 주식 (코스피, 코스닥)\n- **매매 스타일**: 데이 트레이딩 (당일 청산)\n- **API**: 유안타증권 티레이더 Open API\n\n## 핵심 기능\n\n### 1. 리스크 관리\n| 항목 | 비율 | 예시 (1000만원) |\n|------|------|-----------------|\n| 종목당 최대 투자 | 20% | 200만원 |\n| 일일 최대 손실 | 3% | 30만원 |\n| 종목당 손절 | 1.5% | 3만원 |\n| 동시 보유 종목 | 3개 | - |\n\n### 2. 트레이딩 전략\n\n#### 전략 1: 갭 상승 후 눌림목 매수 (승률 65-70%)\n- 장 시작 시 갭 상승 1.5%~5%\n- 고점 형성 후 0.5~1.5% 눌림\n- 거래량 200% 이상\n- VWAP 상회\n\n#### 전략 2: 이동평균선 정배열 돌파 (승률 55-60%)\n- 5분봉 5MA > 10MA > 20MA 정배열\n- 20MA 돌파 + 거래량 300% 이상\n- RSI 50~70, MACD 양전환\n\n#### 전략 3: 볼린저밴드 스퀴즈 (승률 60-65%)\n- 밴드폭 하위 20% (스퀴즈)\n- 상단밴드 돌파 + 거래량 150%\n- RSI 55~75\n\n## 프로젝트 구조\n\n```\nyuanta-autotrading/\n├── src/\n│   ├── api/\n│   │   └── YuantaAPIWrapper.cpp    # API 연동\n│   ├── strategy/\n│   │   ├── GapPullbackStrategy.cpp # 갭 눌림목 전략\n│   │   ├── MABreakoutStrategy.cpp  # MA 돌파 전략\n│   │   └── BBSqueezeStrategy.cpp   # 볼린저 스퀴즈\n│   ├── core/\n│   │   ├── RiskManager.cpp         # 리스크 관리\n│   │   └── OrderExecutor.cpp       # 주문 실행\n│   ├── indicator/\n│   │   └── TechnicalIndicators.cpp # 기술적 지표\n│   ├── data/\n│   │   └── MarketDataManager.cpp   # 시세 데이터\n│   ├── backtest/\n│   │   └── BacktestMain.cpp        # 백테스팅\n│   └── main.cpp\n├── include/                         # 헤더 파일\n├── lib/                            # 유안타 DLL\n├── config/\n│   └── settings.json               # 설정 파일\n├── logs/                           # 로그\n├── CMakeLists.txt\n└── README.md\n```\n\n## 빌드\n\n### 요구사항\n- C++17 이상\n- CMake 3.14 이상\n- Windows (유안타 API "
   },
   {
     "name": "Shuguang-production-report",
@@ -67,7 +73,8 @@
     "updatedAt": "2026-02-06T08:22:59Z",
     "isPrivate": true,
     "stars": 0,
-    "sizeKB": 221
+    "sizeKB": 221,
+    "readme": "# Shuguang 생산일보 전산화 시스템\n\n자동차 사출부품 제조업체를 위한 MES/POP 기반 작업일보 전산화 시스템입니다.\n\n## 🌐 운영 서버\n\n| 항목 | 정보 |\n|------|------|\n| **URL** | https://13.124.115.177 |\n| **서버** | AWS EC2 (Amazon Linux 2023) |\n| **인증서** | 자체 서명 SSL (HTTPS) |\n\n### 기본 계정\n\n| 사번 | 비밀번호 | 권한 | 설명 |\n|------|----------|------|------|\n| ADMIN001 | admin123 | ADMIN | 시스템 관리자 |\n| M001 | 1234 | MANAGER | 관리감독자 |\n| W001 | 1234 | WORKER | 작업자 |\n\n---\n\n## 📁 프로젝트 구조\n\n```\nShuguang-production-report/\n├── frontend/                 # Next.js 프론트엔드\n│   ├── src/\n│   │   ├── app/             # App Router 페이지\n│   │   │   ├── dashboard/   # 대시보드\n│   │   │   ├── injection/   # 사출공정 (관리자)\n│   │   │   ├── assembly/    # 조립공정 (관리자)\n│   │   │   ├── worker/      # 작업자 전용 페이지\n│   │   │   ├── reports/     # 리포트\n│   │   │   └── master/      # 마스터 관리\n│   │   ├── components/      # React 컴포넌트\n│   │   ├── lib/             # API 클라이언트\n│   │   └── stores/          # Zustand 상태관리\n│   └── Dockerfile\n│\n├── backend/                  # Express 백엔드\n│   ├── src/\n│   │   ├── routes/          # API 라우트\n│   │   ├── middleware/      # 인증 미들웨어\n│   │   └── lib/             # Prisma, 유틸리티\n│   ├── prisma/\n│   │   ├── schema.prisma    # DB 스키마\n│   │   ├── seed.ts          # 초기 데이터\n│   │   └── migrations/      # DB 마이그레이션\n│   └── Dockerfile\n│\n├── deploy/                   # 배포 스크립트\n│   ├── deploy.sh            # EC2 배포 스크립트\n│   └── setup-ssl.sh         # SSL 인증서 생성\n│\n├── docker-compose.yml        # 개발환경\n├── docker-compose.prod.yml   # 운영환경\n└── nginx.conf             "
   },
   {
     "name": "KMF-production-report",
@@ -77,7 +84,8 @@
     "updatedAt": "2026-02-05T18:01:01Z",
     "isPrivate": true,
     "stars": 0,
-    "sizeKB": 171
+    "sizeKB": 171,
+    "readme": "# KMF 생산일보 전산화 시스템\n\n자동차 사출부품 제조업체를 위한 MES/POP 기반 작업일보 전산화 시스템입니다.\n\n## 🌐 운영 서버\n\n| 항목 | 정보 |\n|------|------|\n| **URL** | https://13.209.3.151 |\n| **서버** | AWS EC2 (Amazon Linux 2023) |\n| **인증서** | 자체 서명 SSL (HTTPS) |\n\n### 기본 계정\n\n| 사번 | 비밀번호 | 권한 | 설명 |\n|------|----------|------|------|\n| ADMIN001 | admin123 | ADMIN | 시스템 관리자 |\n| M001 | 1234 | MANAGER | 관리감독자 |\n| W001 | 1234 | WORKER | 작업자 |\n\n---\n\n## 📁 프로젝트 구조\n\n```\nKMF-prodution-report/\n├── frontend/                 # Next.js 프론트엔드\n│   ├── src/\n│   │   ├── app/             # App Router 페이지\n│   │   │   ├── dashboard/   # 대시보드\n│   │   │   ├── injection/   # 사출공정 (관리자)\n│   │   │   ├── assembly/    # 조립공정 (관리자)\n│   │   │   ├── worker/      # 작업자 전용 페이지\n│   │   │   ├── reports/     # 리포트\n│   │   │   └── master/      # 마스터 관리\n│   │   ├── components/      # React 컴포넌트\n│   │   ├── lib/             # API 클라이언트\n│   │   └── stores/          # Zustand 상태관리\n│   └── Dockerfile\n│\n├── backend/                  # Express 백엔드\n│   ├── src/\n│   │   ├── routes/          # API 라우트\n│   │   ├── middleware/      # 인증 미들웨어\n│   │   └── lib/             # Prisma, 유틸리티\n│   ├── prisma/\n│   │   ├── schema.prisma    # DB 스키마\n│   │   ├── seed.ts          # 초기 데이터\n│   │   └── migrations/      # DB 마이그레이션\n│   └── Dockerfile\n│\n├── deploy/                   # 배포 스크립트\n│   ├── deploy.sh            # EC2 배포 스크립트\n│   └── setup-ssl.sh         # SSL 인증서 생성\n│\n├── docker-compose.yml        # 개발환경\n├── docker-compose.prod.yml   # 운영환경\n└── nginx.conf               # Nginx 설정 "
   },
   {
     "name": "production-daily-report",
@@ -87,7 +95,8 @@
     "updatedAt": "2026-01-19T05:31:05Z",
     "isPrivate": true,
     "stars": 0,
-    "sizeKB": 163
+    "sizeKB": 163,
+    "readme": ""
   },
   {
     "name": "SJproject",
@@ -97,7 +106,8 @@
     "updatedAt": "2026-05-12T16:49:10Z",
     "isPrivate": true,
     "stars": 1,
-    "sizeKB": 156
+    "sizeKB": 156,
+    "readme": ""
   },
   {
     "name": "hims",
@@ -107,7 +117,8 @@
     "updatedAt": "2025-12-31T04:12:16Z",
     "isPrivate": true,
     "stars": 0,
-    "sizeKB": 133
+    "sizeKB": 133,
+    "readme": "# HIC 투자관리 시스템 (HIMS)\n\nHIC 그룹의 투자 계획 및 실적을 관리하는 웹 기반 시스템입니다.\n\n## 주요 기능\n\n- **대시보드**: 투자 현황 실시간 시각화\n- **투자 목록**: 전체 투자 조회 및 검색\n- **투자 등록**: 신규 투자 등록\n- **데이터 임포트**: 기존 Excel 파일 임포트\n- **분석 리포트**: 거점별/목적별 상세 분석\n\n## 실행 방법\n\n```bash\n# 가상환경 활성화\nsource /home/ybr/.venv/bin/activate\n\n# 실행\ncd /home/ybr/hims\nstreamlit run app.py\n```\n\n또는 실행 스크립트 사용:\n```bash\nchmod +x run.sh\n./run.sh\n```\n\n## 브라우저 접속\n\nhttp://localhost:8501\n\n## 데이터 구조\n\n### 거점 (Site)\n- HIC: 본사 (아산)\n- CHD: 중국 법인\n- IHD: 인도 법인\n- SHD: 슬로바키아 법인\n- AHD: 미국 법인\n- HTC: 천안 법인\n\n### 투자 목적\n- 노후금형신작, 증설, 생산성향상, 신기종, 품질향상\n- 공장이전, 환경개선공사, 신제품, IT관련, 리스 등\n\n## 기술 스택\n\n- Python 3.x\n- Streamlit\n- SQLAlchemy (SQLite)\n- Plotly\n- Pandas\n- openpyxl\n"
   },
   {
     "name": "procurement_system",
@@ -117,7 +128,8 @@
     "updatedAt": "2026-05-21T09:57:50Z",
     "isPrivate": true,
     "stars": 0,
-    "sizeKB": 63
+    "sizeKB": 63,
+    "readme": "# 소모품 통합구매 시스템\n\n회사의 소모품 통합구매 업무를 위한 웹 애플리케이션\n\n## 주요 기능\n\n- **구매 신청**: 부서별 소모품 구매 신청\n- **결재 워크플로우**: 팀장 → 부장 2단계 결재\n- **발주 관리**: PDF/Excel 발주서 생성\n- **재고 관리**: 납품 확인 및 재고 현황 추적\n- **통계 대시보드**: 구매 현황 시각화 및 엑셀 다운로드\n\n## 기술 스택\n\n- Python 3.11\n- Flask 3.0\n- SQLite (SQLAlchemy ORM)\n- Bootstrap 5\n- Chart.js\n\n---\n\n## 배포 가이드\n\n### 방법 1: Docker 배포 (권장)\n\n#### 사전 요구사항\n- Docker 및 Docker Compose 설치\n\n#### 배포 절차\n\n```bash\n# 1. 프로젝트 클론\ngit clone <repository-url>\ncd procurement_system\n\n# 2. 환경 변수 설정\ncp .env.example .env\n\n# 3. .env 파일 수정 (필수)\nvi .env\n```\n\n**.env 파일 설정:**\n```bash\n# 필수: 보안을 위해 반드시 변경\nSECRET_KEY=your-random-secret-key-here\n\n# 선택: 이메일 알림 활성화 시\nMAIL_ENABLED=true\nMAIL_SERVER=smtp.gmail.com\nMAIL_PORT=587\nMAIL_USERNAME=your-email@gmail.com\nMAIL_PASSWORD=your-app-password\n```\n\n```bash\n# 4. Docker 컨테이너 실행\ndocker-compose up -d --build\n\n# 5. 로그 확인\ndocker-compose logs -f\n\n# 6. 접속 확인\ncurl http://localhost:5000\n```\n\n#### Docker 관리 명령어\n\n```bash\n# 컨테이너 상태 확인\ndocker-compose ps\n\n# 컨테이너 중지\ndocker-compose down\n\n# 컨테이너 재시작\ndocker-compose restart\n\n# 로그 확인\ndocker-compose logs -f web\n\n# 데이터베이스 백업\ndocker cp procurement-system:/app/data/procurement.db ./backup.db\n```\n\n---\n\n### 방법 2: 직접 설치\n\n#### 사전 요구사항\n- Python 3.11 이상\n- pip\n\n#### 설치 절차\n\n```bash\n# 1. 프로젝트 클론\ngit clone <repository-url>\ncd procurement_system\n\n# 2. 가상환경 생성 및 활성화\npython -m venv venv\nsource venv/bin/activate  # Windows: venv\\Scripts\\activate\n\n# 3. 의존성 설치\npip install -r requirements.txt\n\n# 4. 환경 변수 설정\ncp .env.example .env\nvi .env  # SECRET_KEY 등 수정\n\n"
   },
   {
     "name": "stock-search",
@@ -127,7 +139,8 @@
     "updatedAt": "2026-01-01T09:50:25Z",
     "isPrivate": false,
     "stars": 0,
-    "sizeKB": 63
+    "sizeKB": 63,
+    "readme": ""
   },
   {
     "name": "fuel_pump_inspection",
@@ -137,7 +150,8 @@
     "updatedAt": "2025-12-29T11:31:16Z",
     "isPrivate": false,
     "stars": 1,
-    "sizeKB": 47
+    "sizeKB": 47,
+    "readme": "# 연료펌프 모듈 검사 시스템\n# Fuel Pump Module Inspection System\n\n라즈베리파이 AI 키트(Hailo-8L)를 활용한 연료펌프 모듈 자동 품질검사 시스템\n\n## 주요 기능\n\n- **외관 결함 검사**: 스크래치, 찍힘, 균열, 이물질, 사출불량 검출\n- **바코드 검사**: 부착 유무, 위치, 데이터 유효성 확인\n- **이종품 검사**: 잘못된 부품 조립, 형상/색상 불일치 검출\n- **딥러닝 검사**: YOLOv8 기반 결함 검출 (ONNX, Hailo 지원)\n\n## 시스템 구성\n\n```\n[카메라] → [라즈베리파이 5 + Hailo-8L] → [검사 모듈]\n                                              ↓\n                                    [외관/바코드/이종품 검사]\n                                              ↓\n                                        [OK/NG 판정]\n                                              ↓\n                                    [PLC 신호 + DB 저장]\n```\n\n## 하드웨어 요구사항\n\n| 구성품 | 사양 |\n|--------|------|\n| Raspberry Pi 5 | 8GB RAM 권장 |\n| Hailo-8L AI 가속기 | 13 TOPS |\n| 카메라 | 1920x1080 이상 |\n| 조명 | 링라이트/백라이트 |\n\n## 설치\n\n```bash\n# 저장소 클론\ngit clone https://github.com/YOUR_USERNAME/fuel_pump_inspection.git\ncd fuel_pump_inspection\n\n# 가상환경 생성\npython3 -m venv venv\nsource venv/bin/activate\n\n# 의존성 설치\npip install -r requirements.txt\n\n# 라즈베리파이에서 Hailo 드라이버 설치\nsudo apt install hailo-all\n```\n\n## 사용법\n\n### 기준 이미지 등록\n```bash\npython main.py --mode register --part-id \"FP-2024-A01\"\n```\n\n### 검사 실행\n```bash\n# 수동 트리거 (스페이스바)\npython main.py --mode run --trigger manual\n\n# GPIO 트리거 (PLC 연동)\npython main.py --mode run --trigger gpio\n\n# 자동 연속 검사\npython main.py --mode run --trigger auto\n```\n\n### 테스트\n```bash\npython test_inspection.py\n```\n\n## 프로젝트 구조\n\n```\nfuel_pump_inspection/\n├── main.py                 # 메인 실행 파일\n├── config.yaml           "
   },
   {
     "name": "cvs-to-",
@@ -147,7 +161,8 @@
     "updatedAt": "2026-01-08T09:36:49Z",
     "isPrivate": true,
     "stars": 0,
-    "sizeKB": 9
+    "sizeKB": 9,
+    "readme": ""
   },
   {
     "name": "cvs-to-xls",
@@ -157,7 +172,8 @@
     "updatedAt": "2026-01-08T07:17:00Z",
     "isPrivate": true,
     "stars": 0,
-    "sizeKB": 0
+    "sizeKB": 0,
+    "readme": ""
   },
   {
     "name": "insa-a",
@@ -167,7 +183,8 @@
     "updatedAt": "2026-01-01T05:33:23Z",
     "isPrivate": true,
     "stars": 0,
-    "sizeKB": 0
+    "sizeKB": 0,
+    "readme": ""
   },
   {
     "name": "insa",
@@ -177,7 +194,8 @@
     "updatedAt": "2026-01-01T04:01:19Z",
     "isPrivate": true,
     "stars": 0,
-    "sizeKB": 0
+    "sizeKB": 0,
+    "readme": ""
   },
   {
     "name": "-",
@@ -187,6 +205,7 @@
     "updatedAt": "2022-06-05T03:48:11Z",
     "isPrivate": true,
     "stars": 0,
-    "sizeKB": 0
+    "sizeKB": 0,
+    "readme": "# -\n아라곤\n"
   }
 ]

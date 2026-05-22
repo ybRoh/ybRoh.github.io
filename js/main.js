@@ -125,8 +125,76 @@
         if (e.key === 'Enter') pwConfirm.click();
     });
 
-    // 전역에서 접근 가능하도록
     window._showPwModal = showPwModal;
+
+    // --- 프로젝트 상세 모달 ---
+    var detailModal = document.getElementById('detail-modal');
+    var detailContent = document.getElementById('detail-content');
+    var detailClose = document.getElementById('detail-close');
+    var allRepos = [];
+
+    function showDetail(index) {
+        var repo = allRepos[index];
+        if (!repo) return;
+
+        var lang = repo.language || 'Unknown';
+        var ls = LANG_COLORS[lang] || DEFAULT_LANG_COLOR;
+        var priv = repo.isPrivate;
+        var releaseUrl = repo.url + '/releases';
+
+        var h = '';
+        h += '<div class="detail-header">';
+        h += '<div class="product-icon" style="background:' + ls.bg + ';color:' + ls.color + ';">' + ICON_CODE + '</div>';
+        h += '<div><div class="detail-name">' + escapeHtml(repo.name) + '</div></div>';
+        h += '</div>';
+
+        h += '<div class="detail-badges">';
+        h += priv
+            ? '<span class="private-badge" style="font-size:12px;">' + ICON_LOCK + ' Private</span>'
+            : '<span class="public-badge" style="font-size:12px;">' + ICON_PUBLIC + ' Public</span>';
+        if (lang !== 'Unknown') h += '<span class="tech-badge" style="background:' + ls.bg + ';color:' + ls.color + ';font-size:11px;padding:2px 8px;">' + escapeHtml(lang) + '</span>';
+        h += '</div>';
+
+        if (repo.description) {
+            h += '<div class="detail-desc">' + escapeHtml(repo.description) + '</div>';
+        }
+
+        h += '<div class="detail-meta">';
+        if (repo.stars > 0) h += '<span class="meta-item">' + ICON_STAR + ' ' + repo.stars + '</span>';
+        var sz = formatSize(repo.sizeKB);
+        if (sz) h += '<span class="meta-item">' + sz + '</span>';
+        h += '<span class="meta-item">' + formatDate(repo.updatedAt) + ' 업데이트</span>';
+        h += '</div>';
+
+        if (repo.readme) {
+            h += '<div class="detail-readme">' + escapeHtml(repo.readme) + '</div>';
+        } else {
+            h += '<div class="detail-no-readme">README가 없습니다.</div>';
+        }
+
+        h += '<div class="detail-actions">';
+        if (priv) {
+            h += '<button class="btn btn-primary btn-sm" onclick="window._showPwModal(\'' + escapeHtml(releaseUrl) + '\')">' + ICON_DOWNLOAD + ' 다운로드</button>';
+        } else {
+            h += '<a href="' + escapeHtml(releaseUrl) + '" class="btn btn-primary btn-sm" target="_blank" rel="noopener">' + ICON_DOWNLOAD + ' 다운로드</a>';
+        }
+        h += '<a href="' + escapeHtml(repo.url) + '" class="btn btn-ghost btn-sm" target="_blank" rel="noopener">' + ICON_GITHUB + ' GitHub</a>';
+        h += '</div>';
+
+        detailContent.innerHTML = h;
+        detailModal.classList.add('visible');
+    }
+
+    function hideDetail() {
+        detailModal.classList.remove('visible');
+    }
+
+    if (detailClose) detailClose.addEventListener('click', hideDetail);
+    if (detailModal) detailModal.addEventListener('click', function (e) {
+        if (e.target === detailModal) hideDetail();
+    });
+
+    window._showDetail = showDetail;
 
     // --- SVG 아이콘 ---
     var ICON_DOWNLOAD = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>';
@@ -173,8 +241,9 @@
                 }
 
                 // 카드 렌더링
+                allRepos = repos;
                 var html = '';
-                repos.forEach(function (repo) {
+                repos.forEach(function (repo, idx) {
                     var lang = repo.language || 'Unknown';
                     var ls = LANG_COLORS[lang] || DEFAULT_LANG_COLOR;
                     var desc = repo.description || '';
@@ -183,7 +252,7 @@
                     var cardCls = priv ? 'product-card private-card' : 'product-card public-card';
                     var releaseUrl = repo.url + '/releases';
 
-                    html += '<div class="' + cardCls + '">';
+                    html += '<div class="' + cardCls + '" onclick="window._showDetail(' + idx + ')" style="cursor:pointer;">';
                     html += '<div class="product-card-header">';
                     html += '<div class="product-icon" style="background:' + ls.bg + ';color:' + ls.color + ';">' + ICON_CODE + '</div>';
                     html += '<div>';
@@ -205,11 +274,11 @@
                     html += '<div class="product-actions">';
                     // 다운로드 버튼: private은 비밀번호, public은 직접 링크
                     if (priv) {
-                        html += '<button class="btn btn-primary btn-sm" onclick="window._showPwModal(\'' + escapeHtml(releaseUrl) + '\')">' + ICON_DOWNLOAD + ' 다운로드</button>';
+                        html += '<button class="btn btn-primary btn-sm" onclick="event.stopPropagation();window._showPwModal(\'' + escapeHtml(releaseUrl) + '\')">' + ICON_DOWNLOAD + ' 다운로드</button>';
                     } else {
-                        html += '<a href="' + escapeHtml(releaseUrl) + '" class="btn btn-primary btn-sm" target="_blank" rel="noopener">' + ICON_DOWNLOAD + ' 다운로드</a>';
+                        html += '<a href="' + escapeHtml(releaseUrl) + '" class="btn btn-primary btn-sm" target="_blank" rel="noopener" onclick="event.stopPropagation()">' + ICON_DOWNLOAD + ' 다운로드</a>';
                     }
-                    html += '<a href="' + escapeHtml(repo.url) + '" class="btn btn-ghost btn-sm" target="_blank" rel="noopener">' + ICON_GITHUB + ' GitHub</a>';
+                    html += '<a href="' + escapeHtml(repo.url) + '" class="btn btn-ghost btn-sm" target="_blank" rel="noopener" onclick="event.stopPropagation()">' + ICON_GITHUB + ' GitHub</a>';
                     html += '</div></div>';
                 });
 
