@@ -881,7 +881,7 @@ ul {
     }
 
     .hero {
-        padding: calc(var(--header-height) + 48px) 0 48px;
+        padding: calc(var(--header-height) + 24px) 0 24px;
     }
 
     .hero-title {
