@@ -1,5 +1,49 @@
 [
   {
+    "name": "mes-streamlit",
+    "description": "자동차부품MES(사출/프레스/가공) - Streamlit 기반 생산관리 시스템",
+    "url": "https://github.com/ybRoh/mes-streamlit",
+    "language": "Python",
+    "updatedAt": "2026-05-22T13:28:37Z",
+    "isPrivate": true,
+    "stars": 0,
+    "sizeKB": 422,
+    "readme": "# MES 생산관리 시스템\n\n자동차부품 MES(사출/프레스/가공) - Streamlit 기반 생산관리 시스템\n\n## 주요 기능\n\n- 작업지시 및 생산실적 관리\n- LOT 추적 (정방향/역추적)\n- OEE 분석 및 실시간 KPI 대시보드\n- 설비보전(PM) 관리\n- 금형 수명 관리\n\n## 기술 스택\n\n- **Backend**: Python\n- **Frontend**: Streamlit\n- **Database**: PostgreSQL / SQLite\n- **ORM**: SQLAlchemy"
+  },
+  {
+    "name": "mes-quality-vue",
+    "description": "",
+    "url": "https://github.com/ybRoh/mes-quality-vue",
+    "language": "Python",
+    "updatedAt": "2026-05-22T13:28:38Z",
+    "isPrivate": true,
+    "stars": 0,
+    "sizeKB": 410,
+    "readme": "# IATF 16949 품질관리 시스템 (QMS)\n\n자동차 산업 품질경영시스템 IATF 16949 규격 기반 품질관리 시스템\n\n## 주요 기능\n\n- SPC 공정능력 분석 (Cp/Cpk)\n- FMEA 위험분석\n- MSA 측정시스템 분석 (GR&R)\n- PPAP / APQP 관리\n- 감사 및 교육훈련 관리\n\n## 기술 스택\n\n- **Backend**: FastAPI (Python)\n- **Frontend**: Vue 3 + Element Plus\n- **Database**: PostgreSQL"
+  },
+  {
+    "name": "production-daily-report",
+    "description": "제조업 생산작업일보 관리 시스템",
+    "url": "https://github.com/ybRoh/production-daily-report",
+    "language": "JavaScript",
+    "updatedAt": "2026-05-22T13:28:38Z",
+    "isPrivate": true,
+    "stars": 0,
+    "sizeKB": 163,
+    "readme": "# 제조업 생산작업일보 관리 시스템\n\n제조 현장의 일일 생산실적을 체계적으로 관리하는 시스템\n\n## 주요 기능\n\n- 일일 생산실적 입력 및 조회\n- 라인별/공정별 생산량 집계\n- 불량률 분석 및 추이 관리\n- 보고서 출력\n\n## 기술 스택\n\n- **Language**: JavaScript / TypeScript"
+  },
+  {
+    "name": "SJproject",
+    "description": "품질이력관리 통합 시스템",
+    "url": "https://github.com/ybRoh/SJproject",
+    "language": "HTML",
+    "updatedAt": "2026-05-22T13:28:40Z",
+    "isPrivate": true,
+    "stars": 1,
+    "sizeKB": 156,
+    "readme": "# 품질이력관리 통합 시스템\n\n제조업체 품질이력을 통합 관리하는 시스템\n\n## 주요 기능\n\n- 품질 검사 이력 관리\n- 불량 유형별 분류 및 통계\n- 품질 추적 보고서\n- 이력 조회 및 검색\n\n## 기술 스택\n\n- **Frontend**: HTML / CSS / JavaScript"
+  },
+  {
     "name": "gsi-production-report",
     "description": "",
     "url": "https://github.com/ybRoh/gsi-production-report",
@@ -33,28 +77,6 @@
     "readme": "# MES System - 자동차부품 생산관리 시스템\n\n자동차부품 제조업을 위한 MES(Manufacturing Execution System) 웹 애플리케이션입니다.\n\n## 기술 스택\n\n- **Frontend**: React 18, TypeScript, Ant Design, Zustand, Recharts\n- **Backend**: Node.js, Express, TypeScript, Prisma\n- **Database**: PostgreSQL\n- **빌드 도구**: Vite\n\n## 주요 기능\n\n- **기준정보 관리**: 품목, BOM, 공정, 설비, 거래처, 창고\n- **생산관리**: 생산계획, 작업지시, 생산실적\n- **재고관리**: 입출고, 재고현황, 재고이력\n- **품질관리**: 검사등록, 불량관리\n- **대시보드**: 실시간 현황, KPI 분석\n\n## 시작하기\n\n### 1. 데이터베이스 실행\n\n```bash\n# Docker로 PostgreSQL 실행\ndocker-compose up -d\n```\n\n### 2. Backend 설정 및 실행\n\n```bash\ncd backend\n\n# 환경변수 설정 (.env 파일 확인)\n# DATABASE_URL=\"postgresql://postgres:postgres@localhost:5432/mes_db?schema=public\"\n\n# Prisma 마이그레이션 및 클라이언트 생성\nnpx prisma migrate dev --name init\nnpx prisma generate\n\n# 개발 서버 실행\nnpm run dev\n```\n\n### 3. Frontend 실행\n\n```bash\ncd frontend\n\n# 개발 서버 실행\nnpm run dev\n```\n\n### 4. 접속\n\n- Frontend: http://localhost:5173\n- Backend API: http://localhost:3001\n\n## 초기 사용자 생성\n\n백엔드 API를 통해 사용자를 생성합니다:\n\n```bash\ncurl -X POST http://localhost:3001/api/auth/register \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n    \"email\": \"admin@example.com\",\n    \"password\": \"admin123\",\n    \"name\": \"관리자\",\n    \"department\": \"생산관리팀\"\n  }'\n```\n\n## 프로젝트 구조\n\n```\nmes-system/\n├── backend/\n│   ├── src/\n│   │   ├── config/         # 설정\n│   │   ├── controllers/    # 컨트롤러\n│   │   ├── middlewares/    # 미들웨어\n│   │   ├── routes/         # 라우트\n│   │   └── index.ts        # 진입점\n│   ├── prisma/\n│   │   └── schema.prisma   # DB 스키마\n│   └── package.json\n├── f"
   },
   {
-    "name": "mes-streamlit",
-    "description": "자동차부품MES(사출/프레스/가공) - Streamlit 기반 생산관리 시스템",
-    "url": "https://github.com/ybRoh/mes-streamlit",
-    "language": "Python",
-    "updatedAt": "2026-05-22T13:28:37Z",
-    "isPrivate": true,
-    "stars": 0,
-    "sizeKB": 422,
-    "readme": "# MES 생산관리 시스템\n\n자동차부품 MES(사출/프레스/가공) - Streamlit 기반 생산관리 시스템\n\n## 주요 기능\n\n- 작업지시 및 생산실적 관리\n- LOT 추적 (정방향/역추적)\n- OEE 분석 및 실시간 KPI 대시보드\n- 설비보전(PM) 관리\n- 금형 수명 관리\n\n## 기술 스택\n\n- **Backend**: Python\n- **Frontend**: Streamlit\n- **Database**: PostgreSQL / SQLite\n- **ORM**: SQLAlchemy"
-  },
-  {
-    "name": "mes-quality-vue",
-    "description": "",
-    "url": "https://github.com/ybRoh/mes-quality-vue",
-    "language": "Python",
-    "updatedAt": "2026-05-22T13:28:38Z",
-    "isPrivate": true,
-    "stars": 0,
-    "sizeKB": 410,
-    "readme": "# IATF 16949 품질관리 시스템 (QMS)\n\n자동차 산업 품질경영시스템 IATF 16949 규격 기반 품질관리 시스템\n\n## 주요 기능\n\n- SPC 공정능력 분석 (Cp/Cpk)\n- FMEA 위험분석\n- MSA 측정시스템 분석 (GR&R)\n- PPAP / APQP 관리\n- 감사 및 교육훈련 관리\n\n## 기술 스택\n\n- **Backend**: FastAPI (Python)\n- **Frontend**: Vue 3 + Element Plus\n- **Database**: PostgreSQL"
-  },
-  {
     "name": "yuanta-autotrading",
     "description": "유안타증권 주식 자동매매 시스템 (C++ / Open API)",
     "url": "https://github.com/ybRoh/yuanta-autotrading",
@@ -86,28 +108,6 @@
     "stars": 0,
     "sizeKB": 171,
     "readme": "# KMF 생산일보 전산화 시스템\n\n자동차 사출부품 제조업체를 위한 MES/POP 기반 작업일보 전산화 시스템입니다.\n\n## 🌐 운영 서버\n\n| 항목 | 정보 |\n|------|------|\n| **URL** | https://13.209.3.151 |\n| **서버** | AWS EC2 (Amazon Linux 2023) |\n| **인증서** | 자체 서명 SSL (HTTPS) |\n\n### 기본 계정\n\n| 사번 | 비밀번호 | 권한 | 설명 |\n|------|----------|------|------|\n| ADMIN001 | admin123 | ADMIN | 시스템 관리자 |\n| M001 | 1234 | MANAGER | 관리감독자 |\n| W001 | 1234 | WORKER | 작업자 |\n\n---\n\n## 📁 프로젝트 구조\n\n```\nKMF-prodution-report/\n├── frontend/                 # Next.js 프론트엔드\n│   ├── src/\n│   │   ├── app/             # App Router 페이지\n│   │   │   ├── dashboard/   # 대시보드\n│   │   │   ├── injection/   # 사출공정 (관리자)\n│   │   │   ├── assembly/    # 조립공정 (관리자)\n│   │   │   ├── worker/      # 작업자 전용 페이지\n│   │   │   ├── reports/     # 리포트\n│   │   │   └── master/      # 마스터 관리\n│   │   ├── components/      # React 컴포넌트\n│   │   ├── lib/             # API 클라이언트\n│   │   └── stores/          # Zustand 상태관리\n│   └── Dockerfile\n│\n├── backend/                  # Express 백엔드\n│   ├── src/\n│   │   ├── routes/          # API 라우트\n│   │   ├── middleware/      # 인증 미들웨어\n│   │   └── lib/             # Prisma, 유틸리티\n│   ├── prisma/\n│   │   ├── schema.prisma    # DB 스키마\n│   │   ├── seed.ts          # 초기 데이터\n│   │   └── migrations/      # DB 마이그레이션\n│   └── Dockerfile\n│\n├── deploy/                   # 배포 스크립트\n│   ├── deploy.sh            # EC2 배포 스크립트\n│   └── setup-ssl.sh         # SSL 인증서 생성\n│\n├── docker-compose.yml        # 개발환경\n├── docker-compose.prod.yml   # 운영환경\n└── nginx.conf               # Nginx 설정 "
-  },
-  {
-    "name": "production-daily-report",
-    "description": "제조업 생산작업일보 관리 시스템",
-    "url": "https://github.com/ybRoh/production-daily-report",
-    "language": "JavaScript",
-    "updatedAt": "2026-05-22T13:28:38Z",
-    "isPrivate": true,
-    "stars": 0,
-    "sizeKB": 163,
-    "readme": "# 제조업 생산작업일보 관리 시스템\n\n제조 현장의 일일 생산실적을 체계적으로 관리하는 시스템\n\n## 주요 기능\n\n- 일일 생산실적 입력 및 조회\n- 라인별/공정별 생산량 집계\n- 불량률 분석 및 추이 관리\n- 보고서 출력\n\n## 기술 스택\n\n- **Language**: JavaScript / TypeScript"
-  },
-  {
-    "name": "SJproject",
-    "description": "품질이력관리 통합 시스템",
-    "url": "https://github.com/ybRoh/SJproject",
-    "language": "HTML",
-    "updatedAt": "2026-05-22T13:28:40Z",
-    "isPrivate": true,
-    "stars": 1,
-    "sizeKB": 156,
-    "readme": "# 품질이력관리 통합 시스템\n\n제조업체 품질이력을 통합 관리하는 시스템\n\n## 주요 기능\n\n- 품질 검사 이력 관리\n- 불량 유형별 분류 및 통계\n- 품질 추적 보고서\n- 이력 조회 및 검색\n\n## 기술 스택\n\n- **Frontend**: HTML / CSS / JavaScript"
   },
   {
     "name": "hims",
