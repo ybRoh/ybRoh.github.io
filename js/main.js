@@ -209,7 +209,7 @@
         var gridEl = document.getElementById('project-grid');
         if (!gridEl) return;
 
-        fetch('data/repos.json')
+        fetch('data/repos.json?v=20260522b')
             .then(function (res) {
                 if (!res.ok) throw new Error('Failed');
                 return res.json();
