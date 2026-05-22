@@ -120,6 +120,20 @@
         </div>
     </footer>
 
+    <!-- 비밀번호 모달 -->
+    <div class="modal-overlay" id="pw-modal">
+        <div class="modal">
+            <h3 class="modal-title">비공개 저장소 다운로드</h3>
+            <p class="modal-desc">비밀번호를 입력하세요.</p>
+            <input type="password" id="pw-input" class="modal-input" placeholder="비밀번호">
+            <div class="modal-error" id="pw-error"></div>
+            <div class="modal-actions">
+                <button class="btn btn-ghost btn-sm" id="pw-cancel">취소</button>
+                <button class="btn btn-primary btn-sm" id="pw-confirm">확인</button>
+            </div>
+        </div>
+    </div>
+
     <script src="js/main.js"></script>
 </body>
 </html>
