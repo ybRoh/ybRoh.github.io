@@ -70,6 +70,12 @@
         return div.innerHTML;
     }
 
+    function formatSize(kb) {
+        if (!kb) return '';
+        if (kb >= 1024) return (kb / 1024).toFixed(1) + ' MB';
+        return kb + ' KB';
+    }
+
     function formatDate(dateStr) {
         var d = new Date(dateStr);
         return d.getFullYear() + '-' +
@@ -189,6 +195,8 @@
                     if (desc) html += '<p class="product-desc">' + escapeHtml(desc) + '</p>';
                     html += '<div class="product-meta">';
                     if (stars > 0) html += '<span class="meta-item">' + ICON_STAR + ' ' + stars + '</span>';
+                    var sizeStr = formatSize(repo.sizeKB);
+                    if (sizeStr) html += '<span class="meta-item">' + sizeStr + '</span>';
                     html += '<span class="meta-item">' + formatDate(repo.updatedAt) + ' 업데이트</span>';
                     html += '</div>';
                     html += '<div class="product-tech">';

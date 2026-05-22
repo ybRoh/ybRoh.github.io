@@ -1,57 +1,13 @@
 [
   {
-    "name": "mes-quality-vue",
-    "description": "",
-    "url": "https://github.com/ybRoh/mes-quality-vue",
-    "language": "Python",
-    "updatedAt": "2026-05-21T15:13:04Z",
-    "isPrivate": true,
-    "stars": 0
-  },
-  {
-    "name": "procurement_system",
-    "description": "소모품 통합구매 관리 시스템 (Flask)",
-    "url": "https://github.com/ybRoh/procurement_system",
-    "language": "HTML",
-    "updatedAt": "2026-05-21T09:57:50Z",
-    "isPrivate": true,
-    "stars": 0
-  },
-  {
-    "name": "mes-system",
-    "description": "",
-    "url": "https://github.com/ybRoh/mes-system",
-    "language": "TypeScript",
-    "updatedAt": "2026-05-21T09:57:45Z",
-    "isPrivate": true,
-    "stars": 0
-  },
-  {
-    "name": "mes-streamlit",
-    "description": "자동차부품MES(사출/프레스/가공) - Streamlit 기반 생산관리 시스템",
-    "url": "https://github.com/ybRoh/mes-streamlit",
-    "language": "Python",
-    "updatedAt": "2026-05-21T09:57:33Z",
-    "isPrivate": true,
-    "stars": 0
-  },
-  {
-    "name": "SJproject",
-    "description": "품질이력관리 통합 시스템",
-    "url": "https://github.com/ybRoh/SJproject",
-    "language": "HTML",
-    "updatedAt": "2026-05-12T16:49:10Z",
-    "isPrivate": true,
-    "stars": 1
-  },
-  {
     "name": "gsi-production-report",
     "description": "",
     "url": "https://github.com/ybRoh/gsi-production-report",
     "language": "TypeScript",
     "updatedAt": "2026-02-25T00:50:52Z",
     "isPrivate": true,
-    "stars": 0
+    "stars": 0,
+    "sizeKB": 24448
   },
   {
     "name": "hic-logistics",
@@ -60,7 +16,38 @@
     "language": "TypeScript",
     "updatedAt": "2026-02-18T02:03:27Z",
     "isPrivate": true,
-    "stars": 0
+    "stars": 0,
+    "sizeKB": 2900
+  },
+  {
+    "name": "mes-system",
+    "description": "",
+    "url": "https://github.com/ybRoh/mes-system",
+    "language": "TypeScript",
+    "updatedAt": "2026-05-21T09:57:45Z",
+    "isPrivate": true,
+    "stars": 0,
+    "sizeKB": 2375
+  },
+  {
+    "name": "mes-streamlit",
+    "description": "자동차부품MES(사출/프레스/가공) - Streamlit 기반 생산관리 시스템",
+    "url": "https://github.com/ybRoh/mes-streamlit",
+    "language": "Python",
+    "updatedAt": "2026-05-21T09:57:33Z",
+    "isPrivate": true,
+    "stars": 0,
+    "sizeKB": 422
+  },
+  {
+    "name": "mes-quality-vue",
+    "description": "",
+    "url": "https://github.com/ybRoh/mes-quality-vue",
+    "language": "Python",
+    "updatedAt": "2026-05-21T15:13:04Z",
+    "isPrivate": true,
+    "stars": 0,
+    "sizeKB": 410
   },
   {
     "name": "yuanta-autotrading",
@@ -69,7 +56,8 @@
     "language": "C++",
     "updatedAt": "2026-02-11T09:13:35Z",
     "isPrivate": false,
-    "stars": 0
+    "stars": 0,
+    "sizeKB": 263
   },
   {
     "name": "Shuguang-production-report",
@@ -78,7 +66,8 @@
     "language": "TypeScript",
     "updatedAt": "2026-02-06T08:22:59Z",
     "isPrivate": true,
-    "stars": 0
+    "stars": 0,
+    "sizeKB": 221
   },
   {
     "name": "KMF-production-report",
@@ -87,7 +76,8 @@
     "language": "TypeScript",
     "updatedAt": "2026-02-05T18:01:01Z",
     "isPrivate": true,
-    "stars": 0
+    "stars": 0,
+    "sizeKB": 171
   },
   {
     "name": "production-daily-report",
@@ -96,52 +86,18 @@
     "language": "JavaScript",
     "updatedAt": "2026-01-19T05:31:05Z",
     "isPrivate": true,
-    "stars": 0
+    "stars": 0,
+    "sizeKB": 163
   },
   {
-    "name": "cvs-to-",
-    "description": "근태관리 뱐환",
-    "url": "https://github.com/ybRoh/cvs-to-",
+    "name": "SJproject",
+    "description": "품질이력관리 통합 시스템",
+    "url": "https://github.com/ybRoh/SJproject",
     "language": "HTML",
-    "updatedAt": "2026-01-08T09:36:49Z",
+    "updatedAt": "2026-05-12T16:49:10Z",
     "isPrivate": true,
-    "stars": 0
-  },
-  {
-    "name": "cvs-to-xls",
-    "description": "근태 변환기",
-    "url": "https://github.com/ybRoh/cvs-to-xls",
-    "language": null,
-    "updatedAt": "2026-01-08T07:17:00Z",
-    "isPrivate": true,
-    "stars": 0
-  },
-  {
-    "name": "stock-search",
-    "description": "주식검색 ",
-    "url": "https://github.com/ybRoh/stock-search",
-    "language": "Python",
-    "updatedAt": "2026-01-01T09:50:25Z",
-    "isPrivate": false,
-    "stars": 0
-  },
-  {
-    "name": "insa-a",
-    "description": "인사관리 ",
-    "url": "https://github.com/ybRoh/insa-a",
-    "language": null,
-    "updatedAt": "2026-01-01T05:33:23Z",
-    "isPrivate": true,
-    "stars": 0
-  },
-  {
-    "name": "insa",
-    "description": "인사관리 ",
-    "url": "https://github.com/ybRoh/insa",
-    "language": null,
-    "updatedAt": "2026-01-01T04:01:19Z",
-    "isPrivate": true,
-    "stars": 0
+    "stars": 1,
+    "sizeKB": 156
   },
   {
     "name": "hims",
@@ -150,7 +106,28 @@
     "language": "Python",
     "updatedAt": "2025-12-31T04:12:16Z",
     "isPrivate": true,
-    "stars": 0
+    "stars": 0,
+    "sizeKB": 133
+  },
+  {
+    "name": "procurement_system",
+    "description": "소모품 통합구매 관리 시스템 (Flask)",
+    "url": "https://github.com/ybRoh/procurement_system",
+    "language": "HTML",
+    "updatedAt": "2026-05-21T09:57:50Z",
+    "isPrivate": true,
+    "stars": 0,
+    "sizeKB": 63
+  },
+  {
+    "name": "stock-search",
+    "description": "주식검색 ",
+    "url": "https://github.com/ybRoh/stock-search",
+    "language": "Python",
+    "updatedAt": "2026-01-01T09:50:25Z",
+    "isPrivate": false,
+    "stars": 0,
+    "sizeKB": 63
   },
   {
     "name": "fuel_pump_inspection",
@@ -159,7 +136,48 @@
     "language": "Python",
     "updatedAt": "2025-12-29T11:31:16Z",
     "isPrivate": false,
-    "stars": 1
+    "stars": 1,
+    "sizeKB": 47
+  },
+  {
+    "name": "cvs-to-",
+    "description": "근태관리 뱐환",
+    "url": "https://github.com/ybRoh/cvs-to-",
+    "language": "HTML",
+    "updatedAt": "2026-01-08T09:36:49Z",
+    "isPrivate": true,
+    "stars": 0,
+    "sizeKB": 9
+  },
+  {
+    "name": "cvs-to-xls",
+    "description": "근태 변환기",
+    "url": "https://github.com/ybRoh/cvs-to-xls",
+    "language": null,
+    "updatedAt": "2026-01-08T07:17:00Z",
+    "isPrivate": true,
+    "stars": 0,
+    "sizeKB": 0
+  },
+  {
+    "name": "insa-a",
+    "description": "인사관리 ",
+    "url": "https://github.com/ybRoh/insa-a",
+    "language": null,
+    "updatedAt": "2026-01-01T05:33:23Z",
+    "isPrivate": true,
+    "stars": 0,
+    "sizeKB": 0
+  },
+  {
+    "name": "insa",
+    "description": "인사관리 ",
+    "url": "https://github.com/ybRoh/insa",
+    "language": null,
+    "updatedAt": "2026-01-01T04:01:19Z",
+    "isPrivate": true,
+    "stars": 0,
+    "sizeKB": 0
   },
   {
     "name": "-",
@@ -168,6 +186,7 @@
     "language": null,
     "updatedAt": "2022-06-05T03:48:11Z",
     "isPrivate": true,
-    "stars": 0
+    "stars": 0,
+    "sizeKB": 0
   }
 ]
