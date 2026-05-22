@@ -370,6 +370,36 @@ ul {
     color: var(--color-text);
 }
 
+.product-card.public-card {
+    background: var(--color-primary-light);
+    border-color: rgba(0, 112, 242, 0.2);
+}
+
+.product-card.private-card {
+    background: var(--color-bg);
+    border-color: var(--color-border);
+}
+
+.private-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 11px;
+    color: var(--color-text-secondary);
+    font-weight: 500;
+    margin-top: 2px;
+}
+
+.public-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 11px;
+    color: var(--color-primary);
+    font-weight: 500;
+    margin-top: 2px;
+}
+
 .product-desc {
     font-size: 14px;
     color: var(--color-text-secondary);
