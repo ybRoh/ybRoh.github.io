@@ -245,7 +245,7 @@ ul {
 
 /* --- Hero Section --- */
 .hero {
-    padding: calc(var(--header-height) + 40px) 0 40px;
+    padding: calc(var(--header-height) + 10px) 0 10px;
     background: linear-gradient(135deg, var(--color-shell) 0%, #1a2d3d 50%, #0d1b2a 100%);
     color: var(--color-white);
     text-align: center;
@@ -881,7 +881,7 @@ ul {
     }
 
     .hero {
-        padding: calc(var(--header-height) + 24px) 0 24px;
+        padding: calc(var(--header-height) + 10px) 0 10px;
     }
 
     .hero-title {
